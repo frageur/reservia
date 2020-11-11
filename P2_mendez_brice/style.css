@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+*
+{
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-size: 1em;
+    outline: none;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+}
+.main-content
+{
+    display: flex;
+    flex-flow: column wrap;
+}
+.stars img
+{
+    width : 20px;
+    height : 20px;
+}
+.svg
+{
+
+    width : 18px;
+    height : 18px;
+}
+h1
+{
+    margin: 1em 0 0.3em 0;
+}
+h1 ~ p 
+{
+    margin: 0em 0em 1em 0;
+}
+.search-input
+{
+    border: 1px solid #f2f2f2;
+
+}
+.submit-input
+{
+    background-color: #0065FC;
+    color: white;
+    height: 41px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    position: absolute;
+}
+.search
+{
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+}
+.svgPosition
+{
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px;
+    padding: 10px;
+}
+input
+{
+    padding: 10px;
+    font-weight: bold;
+}
+li
+{
+    list-style-type: none;
+}
+
+.navigation
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.liens-menu ul
+{
+    display: flex;   
+}
+.liens-menu li
+{
+    padding-right: 15px;
+}
+.topBlue
+{
+    border-top: 2px solid #0065fc;
+    padding-top: 20px;
+    color: #0065fc;
+}
+.colorInscri
+{
+    color:  #0065fc;
+    font-weight: bold;
+}
+.filtres
+{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.filtres p
+{
+    margin-right: 20PX;
+}
+.box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #f2f2f2;
+    border-right: 2px solid #f2f2f2;
+    border-bottom: 2px solid #f2f2f2;
+    border-radius: 99999px;
+    padding-right: 1em;
+    margin-right: 20px;
+  
+}
+.logoFiltre
+{
+    display: flex;
+    background-color: #deebff;
+    border-radius: 9999px;
+    margin-right: 10px;
+    padding: 0.7em;
+}
+.infor
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.indication
+{
+    margin-right: 1em;
+}
+.container-hebergement-populaire
+{
+    display: flex;
+    justify-content: baseline;
+}
+#hebergement
+{
+    display: flex;
+    background-color: #f2f2f2;
+}
+.container-hebergement
+{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+}
+#populaire
+{
+    display: flex;
+    background-color: #f2f2f2;
+}
+.container-populaire
+{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+}
+#activite
+{
+    display: flex;
+    justify-content: baseline;
+}
+footer
+{
+    display: flex;
+    background-color: #f2f2f2;
+}
+.aPropos
+{
+    display: flex;
+    flex-direction: column;
+}
+.nosHebergements
+{
+    display: flex;
+    flex-direction: column;
+}
+.assistance
+{
+    display: flex;
+    flex-direction: column;
+}
+
+/* A EFFACER */
+img
+{
+    max-width: 150px;
+}
+/*PLUS HAUT */
+
+
+@media all and (max-width: 600px)
+{
+    .filtres
+    {
+        flex-flow: column wrap;
+    }
+}

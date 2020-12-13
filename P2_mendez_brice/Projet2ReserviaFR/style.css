@@ -51,28 +51,37 @@ li
 }
 
 /* ///////////////// HEADER \\\\\\\\\\\\\\\\\\\\\\\ */
-nav
-{
-    padding: 2em;
-    padding-bottom: 0;
-}
+
 .navigation
 {
     display: flex;
-    justify-content: space-between;
+    padding: 2em;
+    padding-bottom: 0;
+    align-items: center;
 }
+nav
+{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
 .liens-menu ul
 {
-    display: flex; 
+    display: inline;
+    width: 100%;
 }
 .liens-menu li
 {
-    padding-right: 40px;
+    display: inline;
+    margin-right: 50px;
 }
 .topBlue
 {
-    border-top: 3px solid #0065fc;
-    padding-top: 28px;
+    border-top: 4px solid #0065fc;
+    padding-top: 42px;
+    padding-left: 1em;
+    padding-right: 1em;
     color: #0065fc;
 }
 .colorInscri
@@ -136,6 +145,7 @@ h1 ~ p
 {
     border: 1px solid #f2f2f2;
     height: 50px;
+    border-right: none;
 }
 .submit-input
 {
@@ -174,7 +184,7 @@ input
 .filtres
 {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin:2em 0;
     font-weight: bold;
 }
@@ -217,27 +227,30 @@ input
 .container-hebergement
 {
     display: flex;
+    box-shadow: 0 5px 5px rgb(207, 207, 207);
     margin: 1.5%;
-    border: 4px solid white;
+    border: 5px solid white;
     border-radius: 15px;
     flex-direction: column;
     flex-wrap: wrap;
     background-color: white;
     width: 30%;
+    position: relative;
 }
 .hebergement-information
 {
     display: flex;
     flex-direction: column;
-    position: relative;
     padding: 0.5em;
-    height: 80px;
-    justify-content: space-around;
+}
+.hebergement-information h3
+{
+    margin: 0.5em 0;
 }
 .hebergement-information .stars
 {
     position: absolute;
-    bottom: -8px;
+    bottom: 0px;
 }
 .monimageh
 {
@@ -352,7 +365,8 @@ input
 {
     display: flex;
     flex: 1 1 150px;
-    border: 4px solid white;
+    box-shadow: 0 5px 5px rgb(207, 207, 207);
+    border: 5px solid white;
     border-radius: 15px;
     background-color: white;
     margin-bottom:1.5em;
@@ -364,7 +378,12 @@ input
     padding: 1em;
     flex-direction: column;
     position: relative;
-    justify-content: space-around;
+    padding-top: 8px;
+    padding-right: 15px;
+}
+.populaire-information h3
+{
+    margin: 0.5em 0;
 }
 .populaire-information .stars
 {
@@ -395,7 +414,8 @@ input
 .titleactivite
 {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    padding-left: 12px;
 }
 .container-activite
 {
@@ -536,42 +556,66 @@ footer a
 @media all and (max-width: 600px)
 {
     /* ////////////// HEADER \\\\\\\\\\\ */
-    nav
-    {
-        padding: 2em;
-    }
+
+    /*////////////////////////////////////*/
     .navigation
     {
         flex-direction: column;
+        width: 100%;
+        padding: 2em 0;
+        align-items: flex-start;
+        position: relative;
+    }
+    .navigation a
+    {
+        margin-bottom: 1em;
+    }
+    .liens-menu
+    {
+        display: flex;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .liens-menu ul
+    {
+        width: 100%;
+        text-align: center;
+        display: inline;
     }
     .liens-menu li
     {
-        padding-top: 30px;
-        padding-right: none;
+        margin: 0;
+        padding-right: 45px;
+        padding-left: 45px;
+        flex-wrap: nowrap;
         width: 100%;
     }
     .topBlue
     {
         border-bottom: 3px solid #0065fc;
-        padding-top: none;
         border-top: none;
         padding: 25px 0;
+        
         margin: 0;
         color: #0065fc;
+        width: 40%;
     }
     .bottomGrey
     {
         border-bottom: 3px solid  #f2f2f2;
         padding: 25px 0;
         margin: 0;
+        width: 40%;
     }
     .colorInscri
     {
+        display: flex;
         color:  #0065fc;
         font-weight: bold;
+        order: 1;
         position: absolute;
-        top: 48px;
-        right: 24px;
+        right: 0;
+        top: 3em;
     }
 
     /* ///////////////// SECTION RECHERCHE (filtres etc.) \\\\\\\\\\\\\\\\\\\\\\\ */
@@ -611,7 +655,6 @@ footer a
     }
     .box
     {
-        display: flex;
         justify-content: center;
         align-items: center;
         border-top: 2px solid #f2f2f2;
@@ -622,6 +665,11 @@ footer a
         margin: 0.4em;
     
     }
+    .search form
+    {
+        display: flex;
+        align-items: center;
+    }
     .indication
     {
         margin-right: 1em;
@@ -631,22 +679,30 @@ footer a
         border: 1px solid #f2f2f2;
         border-right: none;
         padding-right: 10px;
-
+        width: 100%;
     }
     .submit-input
+    {
+        display: none;
+    }
+    form button
     {
         background-color: #0065FC;
         color: white;
         border-radius: 15px;
         border: none;
         position: absolute;
-        right: 0.5px;
-        width: 50px;
-        background-image: url(images/fontawesome/search-solid.svg);
-        background-position: center;
-        background-size: 100%;
+        max-height: 50px;
+        right: 0;
+        padding: 1em;
     }
-    .search
+    form button img
+    {
+        text-align: center;
+        height: 18px;
+        width: 18px;
+    }
+        .search
     {
         display: flex;
         position: relative;
@@ -704,9 +760,9 @@ footer a
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        background-color: #f2f2f2;
+        background-color: white;
         border-radius: 10px;
-        margin-right: 2em;
+        margin-right: 0em;
         width: 100%;
         order: 2;
     }
@@ -726,6 +782,7 @@ footer a
         flex-wrap: wrap;
         background-color: white;
         width: 100%;
+        margin-left: 0;
     }
     .hebergement-information
     {
@@ -734,7 +791,6 @@ footer a
         position: relative;
         padding: 0.5em;
         height: 80px;
-        justify-content: space-around;
     }
     .hebergement-information .stars
     {
@@ -750,38 +806,26 @@ footer a
     .auberge-la-cannebière
     {
         background-image: url(images/hebergements/4_small/cannebiere.jpg);
-        background-position: center;
-        background-size: 100%;
     }
     .hotel-du-port
     {
         background-image: url(images/hebergements/4_small/duport.jpg);
-        background-position: center;
-        background-size: 100%;
     }
     .hotel-les-mouettes
     {
         background-image: url(images/hebergements/4_small/lesmouettes.jpg);
-        background-position: center;
-        background-size: 100%;
     }
     .auberge-le-panier
     {
         background-image: url(images/hebergements/4_small/lamer.jpg);
-        background-position: center;
-        background-size: 100%;
     }
     .hotel-de-la-mer
     {
         background-image: url(images/hebergements/4_small/lepanier.jpg);
-        background-position: center;
-        background-size: 100%;
     }
     .hotel-chez-amina
     {
         background-image: url(images/hebergements/4_small/amina.jpg);
-        background-position: center;
-        background-size: 100%;
     }
     .afficherPlus
     {
@@ -795,8 +839,8 @@ footer a
 
     .stars img
     {
-        width : 10px;
-        height : 10px;
+        width : 15px;
+        height : 15px;
     }
 
     /* //////////////// POPULAIRE \\\\\\\\\\\\\\\\\\\ */
@@ -862,7 +906,6 @@ footer a
     {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
         padding: 1em;
         flex-direction: column;
         position: relative;

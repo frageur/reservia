@@ -10,18 +10,18 @@
 <body>
     <div class="main-content">
         <header>
-            <nav class="navigation">
-                <div class="logo-reservia">
-                    <img src="images/logo/Reservia.svg" alt="reservia png">
-                </div>
-                <div class="liens-menu">
-                    <ul>
-                        <li><a href="#hebergement" class="topBlue">Hébergements</a></li>
-                        <li><a href="#activite" class="bottomGrey">Activités</a></li>
-                        <li><a href="#" class="colorInscri">S'inscrire</a></li>
-                    </ul>
-                </div>
-            </nav>
+            <div class="navigation">
+                <a href="#"><img src="images/logo/Reservia.svg" alt="reservia png"></a>
+                <nav>  
+                    <div class="liens-menu">
+                        <ul>
+                            <li class="topBlue"><a href="#hebergement">Hébergements</a></li>
+                            <li class="bottomGrey"><a href="#activite">Activités</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="colorInscri">S'inscrire</a>
+                </nav>
+            </div>
         </header>
         <section>
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
@@ -34,6 +34,7 @@
                 <form>
                     <input class="search-input" type="text" placeholder="ville" value="Marseille, France">
                     <input class="submit-input" type="submit" value="Rechercher">
+                    <button class="submit-input-responsive" type="submit"><img src="images/fontawesome/search-solid.svg" alt=""></button>
                 </form>
             </div>
 
@@ -75,7 +76,7 @@
 
 
         <div id="container-hebergement-populaire">
-            <section class="hebergement">
+            <section class="hebergement" id="hebergement">
                 <h2 class="titleherbegement">Hébergement à Marseille</h2>
 
                 <div class="container-hebergement">
